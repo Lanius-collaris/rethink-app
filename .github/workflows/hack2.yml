@@ -27,7 +27,7 @@ jobs:
       go-version: '1.22.5'
    - name: download special firestack
      run: |
-      'mkdir app/libs'
+      mkdir 'app/libs'
       cd 'app/libs'
       wget -O firestack.zip --tries=3 "https://github.com/Lanius-collaris/firestack/archive/${{ inputs.commit_id }}.zip"
       unzip -q firestack.zip
