@@ -40,6 +40,8 @@ jobs:
      run: |
       sed -i "/fdroidImplementation/c fdroidImplementation files(\'libs/firestack.aar\')" 'app/build.gradle'
       sed -i -e '/crashlytics/d' -e '/gms/d' build.gradle 'app/build.gradle'
+   - name: setup gradle
+     uses: gradle/actions/setup-gradle@v3
    - name: gradle assembleFdroidFullRelease
      run: |
       ./gradlew assembleFdroidFullRelease
